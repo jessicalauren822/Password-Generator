@@ -1,9 +1,9 @@
 // Assignment code here
-var length = Number(prompt("How many characters should the password have (between 8-128)?"));
-var lowercase = confirm("Would you like your password to have lowercase letters?");
-var uppercase = confirm("Would you like your password to have uppercase letters?");
-var numeric = confirm("Would you like yourpassword to have numbers?");
-var special = confirm("Would you like your password to have special characters?");
+var length = Number(window.prompt("How many characters should the password have (between 8 - 128)?"));
+var lowercase = window.confirm("Would you like your password to have lowercase letters?");
+var uppercase = window.confirm("Would you like your password to have uppercase letters?");
+var numeric = window.confirm("Would you like your password to have numbers?");
+var special = window.confirm("Would you like your password to have special characters?");
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
