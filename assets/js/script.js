@@ -1,13 +1,16 @@
 // Assignment code here
-var length = function() {
-    length = (prompt("How many characters should the password have (between 8 - 128?"));
+var passwordLength = function() {
+    passwordLength = Number(prompt("How many characters should the password have (between 8 - 128?"));
   
-  if(length === "" || length === null) {
-    length();
+    
+
+  if(passwordLength === "" || passwordLength === null) {
+    window.alert("You need to provide a valid answer! Please try again.");
+    return passwordLength();
   }
   
   }
-length();
+passwordLength();
 
 var lowercase = window.confirm("Would you like your password to have lowercase letters?");
 var uppercase = window.confirm("Would you like your password to have uppercase letters?");
