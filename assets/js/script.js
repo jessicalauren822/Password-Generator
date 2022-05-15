@@ -1,6 +1,7 @@
 // Assignment code here
 var password = function() {
     passwordLength = (window.prompt("How many characters should the password have (between 8 - 128?"));
+    console.log(passwordLength);
 
   if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
     window.alert("Password must be between 8 - 128 characters.");
@@ -95,16 +96,14 @@ var password = function() {
         }   
         special();
 
-        while (!(lowercase === false && uppercase === false && numeric === false && special === false)) {
+        while (lowercase && uppercase && numeric && special != false) {
           window.alert("You must say yes to at least one character type.");
           return characterOptions();
         }
-
         }
         }
         characterOptions();
       }
-password();
 
 
 // Get references to the #generate element
@@ -121,3 +120,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+password();
+
