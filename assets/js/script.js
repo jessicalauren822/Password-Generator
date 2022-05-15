@@ -1,5 +1,6 @@
 // Assignment code here
-var generatePassword = function() {
+
+var passwordOptions = function() {
     passwordLength = (window.prompt("How many characters should the password have (between 8 - 128?"));
     console.log(passwordLength);
 
@@ -39,16 +40,37 @@ var generatePassword = function() {
 
 function generatePassword() {
   var password = "";
+  var chars = {};
+    if (lowercase = true) {
+      const chars = "abcdefghijklmnopqrstuvwxyz";
+    };
 
-  var allowed = {};
-  if (lowercase) password += random(allowed.lowercase = "abcdefghijklmnopqrstuvwxyz");
-  if (uppercase) password += random(allowed.uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-  if (numeric) password += (Math.floor(Math.random() * 10));
-  if (special) password += random(allowed.special = "!@#$%^&*()");
+    if (uppercase = true) {
+      const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    };
 
-  for (var i = passwordLength.length; i < passwordLength; i++) password += random(random(allowed).value);
+    if (numeric = true) {
+      const chars = "1234567890";
+    };
+
+    if (special = true) {
+      const chars = "!@#$%^&*()";
+    };
+
+  var charactersLength = chars.length;
+  for (var i = 0; i < passwordOptions; i++) {
+    password += generatePassword(Math.floor(Math.random() * charactersLength));
+  }
+  return password;
 
 }
+document.getElementById("password").value = password;
+
+console.log (generatePassword());
+
+
+passwordOptions();
+generatePassword();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -65,4 +87,4 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-writePassword();
+generatePassword();
