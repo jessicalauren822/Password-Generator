@@ -20,28 +20,78 @@ var password = function() {
 
       if (lowerInput === "" || lowerInput === null) {
        window.alert("You need to provide a valid answer! Please try again.");
+       return lowercase();
        
      }
      if (lowerInput === "yes" || lowerInput === "YES") {
        return true; 
      }
+
      else if (lowerInput === "no" || lowerInput === "NO") {
        return false;
      }
     }
+    lowercase();
 
       var uppercase = function() {
-      window.prompt("Would you like your password to have uppercase letters? Please enter YES or NO.");
-    }
+        var upperInput = window.prompt("Would you like your password to have uppercase letters? Please enter YES or NO.");
+        upperInput = upperInput.toLowerCase();
+        console.log(upperInput);
 
-      var numeric =  function() {
-        window.prompt("Would you like your password to have numbers? Please enter YES or NO.");
+        if (upperInput === "" || upperInput === null) {
+          window.alert("You need to provide a valid answer! Please try again.");
+          return uppercase();
         }
 
-      var special = function() {
-        window.prompt("Would you like your password to have special characters? Please enter YES or NO.");
-        }     
+        if (upperInput === "yes" || upperInput === "YES") {
+          return true;
+        }
 
+        else if (upperInput === "no" || upperInput === "NO") {
+          return false;
+        }
+    }
+    uppercase();
+
+      var numeric =  function() {
+        var numericInput = window.prompt("Would you like your password to have numbers? Please enter YES or NO.");
+        numericInput = numericInput.toLowerCase();
+        console.log(numericInput);
+
+        if( numericInput === "" || numericInput === null) {
+          window.alert("You need to provide a valid answer! Please try again.");
+          return numeric();
+        }
+
+        if (numericInput === "yes" || numericInput === "YES") {
+          return true;
+        }
+
+        else if (numericInput === "no" || numericInput === "NO") {
+          return false;
+        }
+        }
+        numeric();
+
+      var special = function() {
+        var specialInput = window.prompt("Would you like your password to have special characters? Please enter YES or NO.");
+        specialInput = specialInput.toLowerCase();
+        console.log(specialInput);
+
+        if (specialInput === "" || specialInput === null) {
+          window.alert ("You need to provide a valid answer! Please try again.");
+          return special();
+        }
+
+        if (specialInput === "yes" || specialInput === "YES") {
+          return true;
+        }
+
+        else if (specialInput === "no" || specialInput === "NO") {
+          return false;
+        }
+        }   
+        special();  
   }
 }
 password();
