@@ -2,7 +2,7 @@
 var password = function() {
     passwordLength = (window.prompt("How many characters should the password have (between 8 - 128?"));
 
-  if (passwordLength < 8 || passwordLength > 128) {
+  if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
     window.alert("Password must be between 8 - 128 characters.");
     return password();
   }
