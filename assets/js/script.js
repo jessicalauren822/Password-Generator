@@ -25,15 +25,17 @@ var generatePassword = function() {
       console.log(numeric);
 
       var special = confirm ("Would you like you password to have special characters? Please select 'Ok' for yes or 'Cancel' for no.");
-
-        if (lowercase && uppercase && numeric && special === false) {
-          window.alert("You must say yes to at least one character type.");
-          return characterOptions();
-        }
-        }
-        }
-        characterOptions();
-      }
+    
+    while (!lowercase && !uppercase && !numeric && !special) {
+      window.alert("You must say yes to at least one character type.");
+      return characterOptions();
+  
+    }
+  }
+}
+  
+  characterOptions();
+}
 
 
 // Get references to the #generate element
