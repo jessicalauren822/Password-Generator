@@ -37,6 +37,18 @@ var generatePassword = function() {
   characterOptions();
 }
 
+function generatePassword() {
+  var password = "";
+
+  var allowed = {};
+  if (lowercase) password += random(allowed.lowercase = "abcdefghijklmnopqrstuvwxyz");
+  if (uppercase) password += random(allowed.uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+  if (numeric) password += (Math.floor(Math.random() * 10));
+  if (special) password += random(allowed.special = "!@#$%^&*()");
+
+  for (var i = passwordLength.length; i < passwordLength; i++) password += random(random(allowed).value);
+
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
