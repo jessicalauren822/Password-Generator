@@ -61,16 +61,10 @@ function generatePassword() {
   for (var i = 0; i < passwordOptions; i++) {
     password += generatePassword(Math.floor(Math.random() * charactersLength));
   }
-  return password;
-
 }
-document.getElementById("password").value = password;
-
 console.log (generatePassword());
+document.querySelector("#password").value = generatePassword;
 
-
-passwordOptions();
-generatePassword();
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -87,4 +81,6 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+passwordOptions();
 generatePassword();
+writePassword();
