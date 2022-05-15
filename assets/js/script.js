@@ -1,5 +1,5 @@
 // Assignment code here
-var password = function() {
+var generatePassword = function() {
     passwordLength = (window.prompt("How many characters should the password have (between 8 - 128?"));
     console.log(passwordLength);
 
@@ -120,5 +120,5 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-password();
 
+writePassword();
