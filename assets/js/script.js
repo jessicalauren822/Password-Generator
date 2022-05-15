@@ -13,6 +13,8 @@ var password = function() {
   }
     
   if (passwordLength >= 8 && passwordLength <=128){
+    var characterOptions = function() {
+
     var lowercase = function () {
       var lowerInput = window.prompt("Would you like your password to have lowercase letters? Please enter YES or NO.");
       lowerInput = lowerInput.toLowerCase();
@@ -91,9 +93,17 @@ var password = function() {
           return false;
         }
         }   
-        special();  
-  }
-}
+        special();
+
+        while (!(lowercase === false && uppercase === false && numeric === false && special === false)) {
+          window.alert("You must say yes to at least one character type.");
+          return characterOptions();
+        }
+
+        }
+        }
+        characterOptions();
+      }
 password();
 
 
