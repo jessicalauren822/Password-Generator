@@ -1,5 +1,8 @@
 # Password Generator
 
+## Website Preview
+[Password Generator Screenshot](/.assets/images/screenshot)
+
 ## About
 A pre-made HTML file was provided for this project to be built upon. The goal is to create a password generator that is able to provide a password based upon entered prompts powered primarily by JavaScript. 
 

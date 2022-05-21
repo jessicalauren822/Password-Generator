@@ -6,12 +6,12 @@ var passwordOptions = function() {
 
   if (isNaN(passwordLength) || passwordLength < 8 || passwordLength > 128) {
     window.alert("Password must be between 8 - 128 characters.");
-    return password();
+    return passwordOptions();
   }
 
   if(passwordLength === "" || passwordLength === null) {
     window.alert("You need to provide a valid answer! Please try again.");
-    return password();
+    return passwordOptions();
   }
     
   if (passwordLength >= 8 && passwordLength <=128){
